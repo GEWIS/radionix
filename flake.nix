@@ -3,20 +3,26 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+
+    # Disko for declarative disk management
+    disko.url = "github:nix-community/disko/latest";
+    disko.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
-    { nixpkgs, ... }:
+    { nixpkgs, disko, ... }:
     {
       nixosConfigurations = {
         icecast-client = nixpkgs.lib.nixosSystem {
           modules = [
             ./icecast-client/configuration.nix
+            disko.nixosModules.default
           ];
         };
         icecast-host = nixpkgs.lib.nixosSystem {
           modules = [
             ./icecast-host/configuration.nix
+            disko.nixosModules.default
           ];
         };
       };
