@@ -9,7 +9,6 @@
     initialPassword = "RadioVo!";
   };
 
-  
   environment.systemPackages = with pkgs; [
     butt
   ];
@@ -22,4 +21,5 @@
   services.xserver.desktopManager.gnome.enable = true;
 
   system.stateVersion = "25.05";
+  nixpkgs.hostPlatform = "x86_64-linux";
 }
