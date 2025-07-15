@@ -10,6 +10,8 @@
     "${modulesPath}/profiles/qemu-guest.nix"
   ];
 
+  networking.hostName = "icecast-host";
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
