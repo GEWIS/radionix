@@ -1,11 +1,20 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  modulesPath,
+  ...
+}:
 {
   imports = [
     ./disko.nix
+    "${modulesPath}/profiles/qemu-guest.nix"
   ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+
+  # Qemu guest agent
+  services.qemuGuest.enable = true;
 
   users.users.radio = {
     isNormalUser = true;
