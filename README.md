@@ -8,3 +8,15 @@ TODO:
 - Add BUTT config files
 - Add machine for Teams call + spotify
 - Add machine for OBS
+
+### Installation
+```
+nix-shell -p disko
+sudo disko --mode disko --flake github:GEWIS/radionix#icecast-{client,host}
+sudo nixos-install --no-channel-copy --no-root-password --flake github:GEWIS/radionix#icecast-{client,host}
+```
+
+### Update
+```
+sudo nixos-rebuild switch --flake github:GEWIS/radionix
+```
