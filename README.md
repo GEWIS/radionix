@@ -9,6 +9,9 @@ TODO:
 - Add machine for Teams call + spotify
 - Add machine for OBS
 
+### Infra overview
+![infra overview](./radio%20infra.drawio.png)
+
 ### Installation
 ```
 nix-shell -p disko
