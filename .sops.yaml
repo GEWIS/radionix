@@ -1,7 +1,11 @@
 keys:
   - &admin_victor age1hguq5vd6lzjzcd37pgstc5jdn6m5gaxxep8dltzs837d59u5dfms9w96mf
+  - &admin_jan age1hcjwn4m0yr92vxn24ws2mres9pclsquekthzf7kx8v2hnelvfg9qva9rd7
+  - &platform_icecast_host age139gq675ql0f0u67rnncjs3qn3p9fsjekd0r55vpddjxnpzmx2q8qe28dav
 creation_rules:
   - path_regex: secrets/[^/]+\.(yaml|json|env|ini)$
     key_groups:
     - age:
       - *admin_victor
+      - *admin_jan
+      - *platform_icecast_host
