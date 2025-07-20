@@ -7,22 +7,37 @@
     # Disko for declarative disk management
     disko.url = "github:nix-community/disko/latest";
     disko.inputs.nixpkgs.follows = "nixpkgs";
+    sops-nix.url = "github:Mic92/sops-nix";
   };
 
   outputs =
-    { nixpkgs, disko, ... }:
+    { nixpkgs, disko, sops-nix, ... }:
     {
       nixosConfigurations = {
         icecast-client = nixpkgs.lib.nixosSystem {
           modules = [
             ./icecast-client/configuration.nix
             disko.nixosModules.default
+            sops-nix.nixosModules.sops
+            {
+              sops = {
+                defaultSopsFile = ./secrets/secrets.yaml;
+                age.sshKeyPaths = ["/etc/ssh/ssh_host_ed25519_key"];
+              };
+            }
           ];
         };
         icecast-host = nixpkgs.lib.nixosSystem {
           modules = [
             ./icecast-host/configuration.nix
             disko.nixosModules.default
+            sops-nix.nixosModules.sops
+            {
+              sops = {
+                defaultSopsFile = ./secrets/secrets.yaml;
+                age.sshKeyPaths = ["/etc/ssh/ssh_host_ed25519_key"];
+              };
+            }
           ];
         };
       };

@@ -7,7 +7,9 @@
 {
   imports = [
     ./disko.nix
+    ./icecast.nix
     "${modulesPath}/profiles/qemu-guest.nix"
+    
   ];
 
   networking.hostName = "icecast-host";
@@ -21,15 +23,7 @@
   users.users.radio = {
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-    initialPassword = "RadioVo!";
-  };
-
-  # Icecast
-  services.icecast = {
-    enable = true;
-    admin.password = "test";
-    hostname = "localhost";
-    listen.address = "0.0.0.0";
+    initialPassword = "RadioVo!"; # Rotate after first login
   };
 
   networking.firewall = {
