@@ -49,8 +49,28 @@
         factory = "adapter";
         args = {
           "factory.name" = "support.null-audio-sink";
-          "node.name" = "Output-Proxy";
-          "node.description" = "Single mixer output device";
+          "node.name" = "Default-Sink";
+          "node.description" = "Default device; unrouted";
+          "media.class" = "Audio/Sink";
+          "audio.position" = "L,R";
+        };
+      }
+      {
+        factory = "adapter";
+        args = {
+          "factory.name" = "support.null-audio-sink";
+          "node.name" = "Interface-Output-Proxy";
+          "node.description" = "Single interface output";
+          "media.class" = "Audio/Sink";
+          "audio.position" = "L,R";
+        };
+      }
+      {
+        factory = "adapter";
+        args = {
+          "factory.name" = "support.null-audio-sink";
+          "node.name" = "Interface-Input-Proxy";
+          "node.description" = "Single interface input";
           "media.class" = "Audio/Sink";
           "audio.position" = "L,R";
         };
@@ -69,12 +89,23 @@
         factory = "adapter";
         args = {
           "factory.name" = "support.null-audio-sink";
+          "node.name" = "Firefox-Proxy";
+          "node.description" = "Firefox should use this as output device";
+          "media.class" = "Audio/Sink";
+          "audio.position" = "L,R";
+        };
+      }
+      {
+        factory = "adapter";
+        args = {
+          "factory.name" = "support.null-audio-sink";
           "node.name" = "Teams-Proxy";
           "node.description" = "Teams should use this as output device";
           "media.class" = "Audio/Sink";
           "audio.position" = "L,R";
         };
       }
+      
     ];
   };
 
