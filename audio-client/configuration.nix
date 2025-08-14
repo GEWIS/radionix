@@ -2,6 +2,7 @@
 {
   imports = [
     ./disko.nix
+    ./butt.nix
   ];
 
   hardware.enableAllFirmware = true;
