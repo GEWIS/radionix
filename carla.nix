@@ -14,12 +14,7 @@
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     initialPassword = "RadioVo!";
   };
-
-  # Beefier test VM
-  virtualisation.vmVariantWithDisko.virtualisation = {
-    memorySize = 8192;
-    cores = 6;
-  };
+  users.groups.audio.members = [ "radio" ];
 
   nixpkgs.config.allowUnfree = true; # For Spotify
   environment.systemPackages = with pkgs; [
@@ -40,6 +35,11 @@
   };
   security.rtkit.enable = true;
 
+  # Beefier test VM
+  virtualisation.vmVariantWithDisko.virtualisation = {
+    memorySize = 8192;
+    cores = 6;
+  };
 
   # Utility sound devices
   services.pipewire.extraConfig.pipewire."50-null-sinks" = {
