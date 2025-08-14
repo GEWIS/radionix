@@ -177,4 +177,5 @@
   '';
 
   sops.templates.".buttrc".path = "/etc/.buttrc";
+  sops.templates.".buttrc".owner = "radio";
 }

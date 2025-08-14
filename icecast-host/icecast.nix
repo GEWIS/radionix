@@ -18,6 +18,8 @@
 
   sops.templates."icecast.xml".content = ''
     <icecast>
+      <location>Eindhoven</location>
+      
       <limits>
           <clients>100</clients>
           <sources>2</sources>
@@ -39,18 +41,23 @@
           <admin-password>${config.sops.placeholder."icecast/admin_password"}</admin-password>
       </authentication>
 
-      <hostname>localhost</hostname>
+      <hostname>radio-icecast.gewis.nl</hostname>
+
       <listen-socket>
           <port>8000</port>
       </listen-socket>
 
+      <http-headers>
+        <header name="Access-Control-Allow-Origin" value="*" />
+      </http-headers>
+
       <fileserve>1</fileserve>
 
       <paths>
-          <basedir>/usr/share/icecast</basedir>
+          <basedir>${pkgs.icecast}/share/icecast</basedir>
           <logdir>/var/log/icecast</logdir>
-          <webroot>/usr/share/icecast/web</webroot>
-          <adminroot>/usr/share/icecast/admin</adminroot>
+          <webroot>${pkgs.icecast}/share/icecast/web</webroot>
+          <adminroot>${pkgs.icecast}/share/icecast/admin</adminroot>
       
           <alias source="/" dest="/status.xsl"/>
       </paths>
