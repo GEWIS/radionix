@@ -5,7 +5,7 @@
   ];
 
   hardware.enableAllFirmware = true;
-  networking.hostName = "radio-audio-client";
+  networking.hostName = "audio-client";
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;

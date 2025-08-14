@@ -14,9 +14,9 @@
     { nixpkgs, disko, sops-nix, ... }:
     {
       nixosConfigurations = {
-        icecast-client = nixpkgs.lib.nixosSystem {
+        audio-client = nixpkgs.lib.nixosSystem {
           modules = [
-            ./icecast-client/configuration.nix
+            ./audio-client/configuration.nix
             disko.nixosModules.default
             sops-nix.nixosModules.sops
             {
