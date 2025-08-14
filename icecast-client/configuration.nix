@@ -4,7 +4,7 @@
     ./disko.nix
   ];
 
-  networking.wireless.enable = true;
+  hardware.enableAllFirmware = true;
   networking.hostName = "radio-audio-client";
 
   boot.loader.systemd-boot.enable = true;
