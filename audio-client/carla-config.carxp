@@ -1,0 +1,608 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE CARLA-PROJECT>
+<CARLA-PROJECT VERSION='2.5'>
+ <EngineSettings>
+  <ForceStereo>false</ForceStereo>
+  <PreferPluginBridges>false</PreferPluginBridges>
+  <PreferUiBridges>true</PreferUiBridges>
+  <UIsAlwaysOnTop>false</UIsAlwaysOnTop>
+  <MaxParameters>200</MaxParameters>
+  <UIBridgesTimeout>4000</UIBridgesTimeout>
+ </EngineSettings>
+
+ <Transport>
+  <BeatsPerMinute>120</BeatsPerMinute>
+ </Transport>
+
+ <!-- LSP Mixer x8 Stereo -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>LSP Mixer x8 Stereo</Name>
+   <URI>http://lsp-plug.in/plugins/lv2/mixer_x8_stereo</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x1</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Enabled</Name>
+    <Symbol>enabled</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Mono output</Name>
+    <Symbol>mono</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Output balance</Name>
+    <Symbol>bal</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Dry amount</Name>
+    <Symbol>dry</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>Wet amount</Name>
+    <Symbol>wet</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>Output gain</Name>
+    <Symbol>g_out</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>Channel solo 1</Name>
+    <Symbol>cs_1</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>Channel mute 1</Name>
+    <Symbol>cm_1</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>Channel phase invert 1</Name>
+    <Symbol>ci_1</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>Channel pan left 1</Name>
+    <Symbol>cp_1l</Symbol>
+    <Value>-100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>Channel pan right 1</Name>
+    <Symbol>cp_1r</Symbol>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>Channel output balance 1</Name>
+    <Symbol>cb_1</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>16</Index>
+    <Name>Channel gain 1</Name>
+    <Symbol>cg_1</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>19</Index>
+    <Name>Channel solo 2</Name>
+    <Symbol>cs_2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>20</Index>
+    <Name>Channel mute 2</Name>
+    <Symbol>cm_2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>21</Index>
+    <Name>Channel phase invert 2</Name>
+    <Symbol>ci_2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>22</Index>
+    <Name>Channel pan left 2</Name>
+    <Symbol>cp_2l</Symbol>
+    <Value>-100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>23</Index>
+    <Name>Channel pan right 2</Name>
+    <Symbol>cp_2r</Symbol>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>24</Index>
+    <Name>Channel output balance 2</Name>
+    <Symbol>cb_2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>25</Index>
+    <Name>Channel gain 2</Name>
+    <Symbol>cg_2</Symbol>
+    <Value>1.00000309944153</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>28</Index>
+    <Name>Channel solo 3</Name>
+    <Symbol>cs_3</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>29</Index>
+    <Name>Channel mute 3</Name>
+    <Symbol>cm_3</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>30</Index>
+    <Name>Channel phase invert 3</Name>
+    <Symbol>ci_3</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>31</Index>
+    <Name>Channel pan left 3</Name>
+    <Symbol>cp_3l</Symbol>
+    <Value>-100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>32</Index>
+    <Name>Channel pan right 3</Name>
+    <Symbol>cp_3r</Symbol>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>33</Index>
+    <Name>Channel output balance 3</Name>
+    <Symbol>cb_3</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>34</Index>
+    <Name>Channel gain 3</Name>
+    <Symbol>cg_3</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>37</Index>
+    <Name>Channel solo 4</Name>
+    <Symbol>cs_4</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>38</Index>
+    <Name>Channel mute 4</Name>
+    <Symbol>cm_4</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>39</Index>
+    <Name>Channel phase invert 4</Name>
+    <Symbol>ci_4</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>40</Index>
+    <Name>Channel pan left 4</Name>
+    <Symbol>cp_4l</Symbol>
+    <Value>-100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>41</Index>
+    <Name>Channel pan right 4</Name>
+    <Symbol>cp_4r</Symbol>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>42</Index>
+    <Name>Channel output balance 4</Name>
+    <Symbol>cb_4</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>43</Index>
+    <Name>Channel gain 4</Name>
+    <Symbol>cg_4</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>46</Index>
+    <Name>Channel solo 5</Name>
+    <Symbol>cs_5</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>47</Index>
+    <Name>Channel mute 5</Name>
+    <Symbol>cm_5</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>48</Index>
+    <Name>Channel phase invert 5</Name>
+    <Symbol>ci_5</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>49</Index>
+    <Name>Channel pan left 5</Name>
+    <Symbol>cp_5l</Symbol>
+    <Value>-100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>50</Index>
+    <Name>Channel pan right 5</Name>
+    <Symbol>cp_5r</Symbol>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>51</Index>
+    <Name>Channel output balance 5</Name>
+    <Symbol>cb_5</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>52</Index>
+    <Name>Channel gain 5</Name>
+    <Symbol>cg_5</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>55</Index>
+    <Name>Channel solo 6</Name>
+    <Symbol>cs_6</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>56</Index>
+    <Name>Channel mute 6</Name>
+    <Symbol>cm_6</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>57</Index>
+    <Name>Channel phase invert 6</Name>
+    <Symbol>ci_6</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>58</Index>
+    <Name>Channel pan left 6</Name>
+    <Symbol>cp_6l</Symbol>
+    <Value>-100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>59</Index>
+    <Name>Channel pan right 6</Name>
+    <Symbol>cp_6r</Symbol>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>60</Index>
+    <Name>Channel output balance 6</Name>
+    <Symbol>cb_6</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>61</Index>
+    <Name>Channel gain 6</Name>
+    <Symbol>cg_6</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>64</Index>
+    <Name>Channel solo 7</Name>
+    <Symbol>cs_7</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>65</Index>
+    <Name>Channel mute 7</Name>
+    <Symbol>cm_7</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>66</Index>
+    <Name>Channel phase invert 7</Name>
+    <Symbol>ci_7</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>67</Index>
+    <Name>Channel pan left 7</Name>
+    <Symbol>cp_7l</Symbol>
+    <Value>-100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>68</Index>
+    <Name>Channel pan right 7</Name>
+    <Symbol>cp_7r</Symbol>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>69</Index>
+    <Name>Channel output balance 7</Name>
+    <Symbol>cb_7</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>70</Index>
+    <Name>Channel gain 7</Name>
+    <Symbol>cg_7</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>73</Index>
+    <Name>Channel solo 8</Name>
+    <Symbol>cs_8</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>74</Index>
+    <Name>Channel mute 8</Name>
+    <Symbol>cm_8</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>75</Index>
+    <Name>Channel phase invert 8</Name>
+    <Symbol>ci_8</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>76</Index>
+    <Name>Channel pan left 8</Name>
+    <Symbol>cp_8l</Symbol>
+    <Value>-100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>77</Index>
+    <Name>Channel pan right 8</Name>
+    <Symbol>cp_8r</Symbol>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>78</Index>
+    <Name>Channel output balance 8</Name>
+    <Symbol>cb_8</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>79</Index>
+    <Name>Channel gain 8</Name>
+    <Symbol>cg_8</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>http://lsp-plug.in/plugins/lv2/mixer_x8_stereo/ports#send</Key>
+    <Value></Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>http://lsp-plug.in/plugins/lv2/mixer_x8_stereo/ports#return</Key>
+    <Value></Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>http://lsp-plug.in/plugins/lv2/mixer_x8_stereo/ports#ret_1</Key>
+    <Value></Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>http://lsp-plug.in/plugins/lv2/mixer_x8_stereo/ports#ret_2</Key>
+    <Value></Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>http://lsp-plug.in/plugins/lv2/mixer_x8_stereo/ports#ret_3</Key>
+    <Value></Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>http://lsp-plug.in/plugins/lv2/mixer_x8_stereo/ports#ret_4</Key>
+    <Value></Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>http://lsp-plug.in/plugins/lv2/mixer_x8_stereo/ports#ret_5</Key>
+    <Value></Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>http://lsp-plug.in/plugins/lv2/mixer_x8_stereo/ports#ret_6</Key>
+    <Value></Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>http://lsp-plug.in/plugins/lv2/mixer_x8_stereo/ports#ret_7</Key>
+    <Value></Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>http://lsp-plug.in/plugins/lv2/mixer_x8_stereo/ports#ret_8</Key>
+    <Value></Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <ExternalPatchbay>
+  <Connection>
+   <Source>Built-in Audio Analog Stereo:capture_FL</Source>
+   <Target>PipeWire ALSA [butt]/ALSA Capture [butt]:input_FL</Target>
+  </Connection>
+  <Connection>
+   <Source>Built-in Audio Analog Stereo:capture_FR</Source>
+   <Target>PipeWire ALSA [butt]/ALSA Capture [butt]:input_FR</Target>
+  </Connection>
+  <Connection>
+   <Source>LSP Mixer x8 Stereo:Output L</Source>
+   <Target>Single interface output:playback_1</Target>
+  </Connection>
+  <Connection>
+   <Source>LSP Mixer x8 Stereo:Output R</Source>
+   <Target>Single interface output:playback_2</Target>
+  </Connection>
+  <Connection>
+   <Source>Single interface input:monitor_1</Source>
+   <Target>LSP Mixer x8 Stereo:Audio input left 4</Target>
+  </Connection>
+  <Connection>
+   <Source>Single interface input:monitor_2</Source>
+   <Target>LSP Mixer x8 Stereo:Audio input right 4</Target>
+  </Connection>
+  <Connection>
+   <Source>Spotify should use this as output device:monitor_1</Source>
+   <Target>LSP Mixer x8 Stereo:Audio input left 1</Target>
+  </Connection>
+  <Connection>
+   <Source>Spotify should use this as output device:monitor_2</Source>
+   <Target>LSP Mixer x8 Stereo:Audio input right 1</Target>
+  </Connection>
+  <Connection>
+   <Source>Firefox should use this as output device:monitor_1</Source>
+   <Target>LSP Mixer x8 Stereo:Audio input left 2</Target>
+  </Connection>
+  <Connection>
+   <Source>Firefox should use this as output device:monitor_2</Source>
+   <Target>LSP Mixer x8 Stereo:Audio input right 2</Target>
+  </Connection>
+  <Connection>
+   <Source>Teams should use this as output device:monitor_1</Source>
+   <Target>LSP Mixer x8 Stereo:Audio input left 3</Target>
+  </Connection>
+  <Connection>
+   <Source>Teams should use this as output device:monitor_2</Source>
+   <Target>LSP Mixer x8 Stereo:Audio input right 3</Target>
+  </Connection>
+  <Positions>
+   <Position x1="1137" y1="1106" x2="2423" y2="1169">
+    <Name>Built-in Audio Analog Stereo</Name>
+   </Position>
+   <Position x1="1376" y1="1188">
+    <Name>Default device; unrouted</Name>
+   </Position>
+   <Position x1="2274" y1="1265">
+    <Name>Single interface output</Name>
+   </Position>
+   <Position x1="1466" y1="1499">
+    <Name>Single interface input</Name>
+   </Position>
+   <Position x1="1376" y1="1254">
+    <Name>Spotify should use this as output device</Name>
+   </Position>
+   <Position x1="1376" y1="1317">
+    <Name>Firefox should use this as output device</Name>
+   </Position>
+   <Position x1="1386" y1="1388">
+    <Name>Teams should use this as output device</Name>
+   </Position>
+   <Position x1="1626" y1="1842" x2="2109" y2="1808">
+    <Name>Midi-Bridge</Name>
+   </Position>
+   <Position x1="1506" y1="1120" x2="2264" y2="1143">
+    <Name>BLE MIDI 1</Name>
+   </Position>
+   <Position x1="1774" y1="1183" pluginId="0">
+    <Name>LSP Mixer x8 Stereo</Name>
+   </Position>
+  </Positions>
+ </ExternalPatchbay>
+</CARLA-PROJECT>
