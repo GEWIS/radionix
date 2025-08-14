@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   imports = [ ];
@@ -7,11 +12,9 @@
     icecast
   ];
 
-
-
-  sops.secrets."icecast/admin_password" = {};
-  sops.secrets."icecast/source_password" = {};
-  sops.secrets."icecast/relay_password" = {};
+  sops.secrets."icecast/admin_password" = { };
+  sops.secrets."icecast/source_password" = { };
+  sops.secrets."icecast/relay_password" = { };
 
   sops.templates."icecast.xml".content = ''
     <icecast>

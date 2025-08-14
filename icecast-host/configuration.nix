@@ -9,7 +9,7 @@
     ./disko.nix
     ./icecast.nix
     "${modulesPath}/profiles/qemu-guest.nix"
-    
+
   ];
 
   networking.hostName = "icecast-host";
@@ -20,10 +20,13 @@
   # Qemu guest agent
   services.qemuGuest.enable = true;
 
+  sops.secrets."user_password" = {
+    neededForUsers = true;
+  };
   users.users.radio = {
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-    initialPassword = "RadioVo!"; # Rotate after first login
+    hashedPasswordFile = config.sops.secrets."user_password".path;
   };
 
   networking.firewall = {
