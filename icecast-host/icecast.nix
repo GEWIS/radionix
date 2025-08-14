@@ -47,10 +47,10 @@
       <fileserve>1</fileserve>
 
       <paths>
-          <basedir>/usr/share/icecast</basedir>
+          <basedir>${pkgs.icecast}/share/icecast</basedir>
           <logdir>/var/log/icecast</logdir>
-          <webroot>/usr/share/icecast/web</webroot>
-          <adminroot>/usr/share/icecast/admin</adminroot>
+          <webroot>${pkgs.icecast}/share/icecast/web</webroot>
+          <adminroot>${pkgs.icecast}/share/icecast/admin</adminroot>
       
           <alias source="/" dest="/status.xsl"/>
       </paths>
