@@ -20,6 +20,7 @@
   # Qemu guest agent
   services.qemuGuest.enable = true;
 
+  users.mutableUsers = false;
   sops.secrets."user_password" = {
     neededForUsers = true;
   };
