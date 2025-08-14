@@ -64,6 +64,10 @@
 
       <security>
           <chroot>0</chroot>
+          <changeowner>
+            <user>nobody</user>
+            <group>nogroup</group>
+          </changeowner>
       </security>
     </icecast>
   '';
