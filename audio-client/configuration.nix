@@ -42,7 +42,6 @@
   };
   security.rtkit.enable = true;
 
-
   # Utility sound devices
   services.pipewire.extraConfig.pipewire."50-null-sinks" = {
     "context.objects" = [
@@ -60,8 +59,8 @@
         factory = "adapter";
         args = {
           "factory.name" = "support.null-audio-sink";
-          "node.name" = "Interface-Output-Proxy";
-          "node.description" = "Single interface output";
+          "node.name" = "Interface-Output-Mixed-Proxy";
+          "node.description" = "Mixed laptop output";
           "media.class" = "Audio/Sink";
           "audio.position" = "L,R";
         };
@@ -70,8 +69,38 @@
         factory = "adapter";
         args = {
           "factory.name" = "support.null-audio-sink";
-          "node.name" = "Interface-Input-Proxy";
-          "node.description" = "Single interface input";
+          "node.name" = "Interface-Output-Teams-Proxy";
+          "node.description" = "Teams laptop output";
+          "media.class" = "Audio/Sink";
+          "audio.position" = "L,R";
+        };
+      }
+      {
+        factory = "adapter";
+        args = {
+          "factory.name" = "support.null-audio-sink";
+          "node.name" = "Interface-Output-Effects-Proxy";
+          "node.description" = "Effects laptop output";
+          "media.class" = "Audio/Sink";
+          "audio.position" = "L,R";
+        };
+      }
+      {
+        factory = "adapter";
+        args = {
+          "factory.name" = "support.null-audio-sink";
+          "node.name" = "Interface-Input-Mixed-Proxy";
+          "node.description" = "Fully mixed signal";
+          "media.class" = "Audio/Sink";
+          "audio.position" = "L,R";
+        };
+      }
+      {
+        factory = "adapter";
+        args = {
+          "factory.name" = "support.null-audio-sink";
+          "node.name" = "Interface-Input-Voice-Proxy";
+          "node.description" = "Voice only signal";
           "media.class" = "Audio/Sink";
           "audio.position" = "L,R";
         };
@@ -106,7 +135,7 @@
           "audio.position" = "L,R";
         };
       }
-      
+
     ];
   };
 
