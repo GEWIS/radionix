@@ -145,7 +145,24 @@
   services.xserver.displayManager.gdm.enable = true;
 
   services.xserver.desktopManager.gnome.enable = true;
+ 
+  # Do not suspend and stuff
+  services.logind.lidSwitch = "ignore";
+  services.logind.lidSwitchDocked = "ignore";
+
+  services.logind.extraConfig = ''
+    IdleAction=ignore
+    HandleLidSwitch=ignore
+    HandleLidSwitchDocked=ignore
+  '';
+
+  services.xserver.desktopManager.gnome.extraGSettingsOverrides = ''
+    [org.gnome.settings-daemon.plugins.power]
+    sleep-inactive-ac-type='nothing'
+    lid-close-ac-action='nothing'
+  '';
 
   system.stateVersion = "25.05";
   nixpkgs.hostPlatform = "x86_64-linux";
+
 }
