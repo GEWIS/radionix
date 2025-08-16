@@ -32,6 +32,7 @@
     firefox
     pulsemixer
     pavucontrol
+    obs-studio
   ];
 
   # Sound setup
